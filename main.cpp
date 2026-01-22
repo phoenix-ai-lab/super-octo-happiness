@@ -80,10 +80,14 @@ private slots:
         editor->setCaretLineVisible(true);
         editor->setCaretLineBackgroundColor(Qt::white); // active line white
 
-        // Font
-        QFont font("JetBrains Mono", 11);
-        editor->setFont(font);
-        editor->setMarginsFont(font);
+        // Font: Intel One Mono
+QFont font("Intel One Mono");
+font.setPointSize(11);
+font.setStyleHint(QFont::Monospace);
+font.setFixedPitch(true);
+
+editor->setFont(font);
+editor->setMarginsFont(font);
     }
 
     void setupLexer() {
